@@ -10,6 +10,7 @@
   --text: #000000;
   --muted: #666666;
   --subtle: #999999;
+  --rule: #d8d8d8;
   --star-rgb: 0, 0, 0;
   --toggle-bg: #e3e3e3;
   --toggle-border: #cccccc;
@@ -22,6 +23,7 @@
   --text: #ffffff;
   --muted: #b8b8b8;
   --subtle: #8c8c8c;
+  --rule: #303030;
   --star-rgb: 255, 255, 255;
   --toggle-bg: #202020;
   --toggle-border: #3a3a3a;
@@ -41,6 +43,11 @@ a,
 .description,
 .project-list li::before,
 .project-info p,
+.archive-intro,
+.archive-section,
+.archive-section summary::before,
+.archive-lines li,
+.archive-lines li::before,
 .theme-toggle,
 .theme-toggle-track,
 .theme-toggle-thumb,
@@ -272,6 +279,81 @@ a {
   content: '\2014  ';
 }
 
+.archive-content {
+  max-width: 812px;
+}
+
+.archive {
+  max-width: none;
+}
+
+.archive-intro {
+  margin-bottom: 2.65rem;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.archive-section {
+  border-bottom: 1px solid var(--rule);
+  transition-property: border-color;
+}
+
+.archive-section summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.42rem 0;
+  color: var(--text);
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.4;
+  list-style: none;
+  cursor: pointer;
+}
+
+.archive-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.archive-section summary::marker {
+  content: '';
+}
+
+.archive-section summary::before {
+  content: '+';
+  width: 0.78rem;
+  color: var(--subtle);
+  font-size: 0.86rem;
+  line-height: 1;
+}
+
+.archive-section[open] summary::before {
+  content: '-';
+}
+
+.archive-lines {
+  list-style: none;
+  padding: 0 0 1.85rem;
+}
+
+.archive-lines li {
+  display: block;
+  color: var(--text);
+  font-size: 1.01rem;
+  font-weight: 600;
+  line-height: 1.75;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.archive-lines li::before {
+  content: '\2014  ';
+  color: var(--subtle);
+}
+
 .project-list {
   list-style: none;
   counter-reset: projects;
@@ -419,5 +501,9 @@ a {
 
   .project-list li {
     gap: 0.9rem;
+  }
+
+  .archive-lines li {
+    white-space: normal;
   }
 }
