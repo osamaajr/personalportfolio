@@ -3,11 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="0; url=portfolio.html" />
   <title>Osama - Portfolio</title>
-  <link rel="canonical" href="portfolio.html" />
+  <script>
+    (() => {
+      try {
+        if (localStorage.getItem('portfolio-theme') === 'dark') {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      } catch (_) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <p><a href="portfolio.html">View Osama's portfolio</a></p>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="/" class="active">Home</a>
+        <a href="/building">Building</a>
+        <a href="/blog">Blog</a>
+        <a href="/archive">Archive</a>
+      </nav>
+
+      <div class="sidebar-social">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/osamaajr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/osamaajr" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:osama.alnajar.26@gmail.com">Email</a>
+        </div>
+
+        <label class="theme-toggle" title="Toggle theme">
+          <input type="checkbox" data-theme-toggle />
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+            <span class="theme-toggle-icon sun">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </span>
+            <span class="theme-toggle-icon moon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.8A8.4 8.4 0 1 1 11.2 3 6.4 6.4 0 0 0 21 12.8z"></path>
+              </svg>
+            </span>
+          </span>
+        </label>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="header">
+        <h1>Osama Alnajar <span class="arabic-name" lang="ar" dir="rtl">(أسامة النجار)</span></h1>
+      </header>
+      <hr class="header-divider" />
+
+      <div class="description">
+        <div class="section">
+          <p>Studying CS at the <a href="#">University of Liverpool</a>:</p>
+          <span class="item">first year: first class</span>
+          <span class="item">second year: high first class</span>
+        </div>
+        <div class="section">
+          <p>Currently SWE Intern @ <a href="#">Vanguard</a>.</p>
+          <span class="item">summer 2026</span>
+        </div>
+        <div class="section">
+          <p>Previously SWE Intern @ <a href="#">Doctoria Ltd</a>.</p>
+          <span class="item">built full-stack tech that will (hopefully) change lives</span>
+        </div>
+        <div class="section">
+          <p>Computer Science Lead @ <a href="#">Liverpool MedTech</a>.</p>
+          <span class="item">hosted a coding escape room to 100+ students</span>
+        </div>
+        <div class="section">
+          <p>AI Data Specialist @ <a href="#">Mercor</a> &amp; <a href="#">Outlier</a>.</p>
+          <span class="item">i get paid to play with llms</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="shooting-stars.js" defer></script>
+  <script src="theme-toggle.js" defer></script>
 </body>
 </html>
