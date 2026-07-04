@@ -48,12 +48,6 @@ a,
 .archive-section summary::before,
 .archive-lines li,
 .archive-lines li::before,
-.spotify-disc,
-.spotify-disc-art,
-.spotify-disc-core,
-.spotify-note,
-.spotify-kicker,
-.spotify-artist,
 .theme-toggle,
 .theme-toggle-track,
 .theme-toggle-thumb,
@@ -360,160 +354,6 @@ a {
   color: var(--subtle);
 }
 
-.archive-lines li.archive-listening {
-  overflow: visible;
-  white-space: normal;
-}
-
-.spotify-now {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.78rem;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.spotify-disc {
-  position: relative;
-  flex: 0 0 48px;
-  width: 48px;
-  height: 48px;
-  border: 1px solid var(--rule);
-  border-radius: 50%;
-  overflow: visible;
-  background:
-    radial-gradient(circle at center, var(--bg) 0 10%, var(--text) 11% 13%, transparent 14%),
-    repeating-radial-gradient(circle at center, rgba(var(--star-rgb), 0.16) 0 1px, transparent 1px 5px),
-    conic-gradient(from 20deg, rgba(var(--star-rgb), 0.05), rgba(var(--star-rgb), 0.24), rgba(var(--star-rgb), 0.05), rgba(var(--star-rgb), 0.18), rgba(var(--star-rgb), 0.05));
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-  text-decoration: none;
-  transition-property: border-color, background-color, box-shadow;
-}
-
-.spotify-disc-art {
-  position: absolute;
-  inset: 8px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at center, transparent 0 20%, rgba(var(--star-rgb), 0.15) 21% 100%),
-    linear-gradient(135deg, rgba(var(--star-rgb), 0.16), rgba(var(--star-rgb), 0.02));
-  background-position: center;
-  background-size: cover;
-  opacity: 0.62;
-  transition-property: opacity;
-}
-
-.spotify-disc.has-art .spotify-disc-art {
-  opacity: 0.9;
-}
-
-.spotify-disc-core {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 11px;
-  height: 11px;
-  border: 1px solid var(--rule);
-  border-radius: 50%;
-  background: var(--bg);
-  transform: translate(-50%, -50%);
-  transition-property: background-color, border-color;
-}
-
-.spotify-note {
-  position: absolute;
-  color: var(--subtle);
-  font-size: 0.88rem;
-  line-height: 1;
-  opacity: 0.34;
-  pointer-events: none;
-  transition-property: color, opacity;
-}
-
-.note-one {
-  top: -0.45rem;
-  right: -0.35rem;
-}
-
-.note-two {
-  top: 0.28rem;
-  right: -1rem;
-  font-size: 0.78rem;
-}
-
-.note-three {
-  right: -0.56rem;
-  bottom: 0.18rem;
-  font-size: 0.72rem;
-}
-
-.spotify-now.is-playing .spotify-disc-art {
-  animation: spin-disc 8s linear infinite;
-}
-
-.spotify-now.is-playing .spotify-note {
-  animation: float-note 2.6s ease-in-out infinite;
-  opacity: 0.72;
-}
-
-.spotify-now.is-playing .note-two {
-  animation-delay: 0.4s;
-}
-
-.spotify-now.is-playing .note-three {
-  animation-delay: 0.82s;
-}
-
-.spotify-copy {
-  display: inline-flex;
-  min-width: 0;
-  flex-direction: column;
-  gap: 0.06rem;
-}
-
-.spotify-kicker,
-.spotify-artist {
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.35;
-  transition-property: color;
-}
-
-.spotify-track {
-  width: max-content;
-  max-width: min(100%, 30rem);
-  overflow: hidden;
-  color: var(--text);
-  font-size: 1.01rem;
-  font-weight: 600;
-  line-height: 1.35;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.spotify-artist {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-@keyframes spin-disc {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes float-note {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0.22rem, -0.34rem);
-  }
-}
-
 .project-list {
   list-style: none;
   counter-reset: projects;
@@ -665,20 +505,5 @@ a {
 
   .archive-lines li {
     white-space: normal;
-  }
-
-  .spotify-now {
-    align-items: flex-start;
-  }
-
-  .spotify-track {
-    max-width: calc(100vw - 7rem);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .spotify-now.is-playing .spotify-disc-art,
-  .spotify-now.is-playing .spotify-note {
-    animation: none;
   }
 }
