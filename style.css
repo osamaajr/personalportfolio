@@ -387,7 +387,7 @@ a {
   gap: 0.26rem;
 }
 
-.project-info a {
+.project-name {
   align-self: flex-start;
   font-size: 0.95rem;
   font-weight: 500;
