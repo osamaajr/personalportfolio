@@ -392,6 +392,8 @@ a {
   font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.25;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .project-info p {
