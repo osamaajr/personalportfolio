@@ -403,6 +403,25 @@ a {
   line-height: 1.8;
 }
 
+.project-more {
+  margin-top: -0.25rem;
+}
+
+.project-list li.project-more::before {
+  counter-increment: none;
+  content: "";
+}
+
+.project-more .project-name {
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.project-more p {
+  font-size: 0.9rem;
+}
+
 .shooting-star-layer {
   position: fixed;
   inset: 0;
