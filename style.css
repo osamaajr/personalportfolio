@@ -107,7 +107,7 @@ a {
   position: relative;
   border: 0;
   color: var(--text);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.03em;
   line-height: 1.2;
@@ -290,7 +290,7 @@ a {
 .archive-intro {
   margin-bottom: 2.65rem;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   font-style: italic;
 }
@@ -306,7 +306,7 @@ a {
   gap: 0.75rem;
   padding: 1.42rem 0;
   color: var(--text);
-  font-size: 1.06rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.4;
   list-style: none;
@@ -341,7 +341,7 @@ a {
 .archive-lines li {
   display: block;
   color: var(--text);
-  font-size: 1.01rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.75;
   overflow: hidden;
@@ -389,7 +389,7 @@ a {
 
 .project-name {
   align-self: flex-start;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.25;
   text-decoration: underline;
@@ -399,7 +399,7 @@ a {
 .project-info p {
   max-width: 690px;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.8;
 }
 
@@ -414,12 +414,12 @@ a {
 
 .project-more .project-name {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 1.1rem;
   text-decoration: none;
 }
 
 .project-more p {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .shooting-star-layer {
