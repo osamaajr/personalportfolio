@@ -68,6 +68,7 @@ body {
   background: transparent;
   color: var(--text);
   font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.2rem;
   line-height: 1.8;
   transition-property: color;
 }
