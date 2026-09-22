@@ -68,7 +68,6 @@ body {
   background: transparent;
   color: var(--text);
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 4rem;
   line-height: 1.8;
   transition-property: color;
 }
@@ -259,7 +258,7 @@ a {
 .description {
   margin-top: 1.5rem;
   color: var(--text);
-  font-size: 4rem;
+  font-size: 1.3rem;
   line-height: 1.8;
 }
 
