@@ -281,15 +281,15 @@ a {
 
 .feature-link-icon {
   display: inline-block;
-  width: 0.72em;
-  height: 0.72em;
+  width: 0.9em;
+  height: 0.9em;
   margin-left: 0.18em;
-  vertical-align: -0.03em;
+  vertical-align: -0.12em;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.8;
+  stroke-width: 3.2;
 }
 
 .archive-content {
