@@ -279,6 +279,19 @@ a {
   content: '\2014  ';
 }
 
+.feature-link-icon {
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  margin-left: 0.18em;
+  vertical-align: -0.03em;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
 .archive-content {
   max-width: 812px;
 }
