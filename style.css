@@ -396,6 +396,10 @@ a {
   text-underline-offset: 3px;
 }
 
+.project-name-plain {
+  text-decoration: none;
+}
+
 .project-info p {
   max-width: 690px;
   color: var(--muted);
@@ -528,3 +532,4 @@ a {
     white-space: normal;
   }
 }
+
