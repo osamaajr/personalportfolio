@@ -266,6 +266,13 @@ a {
   margin-bottom: 0.45rem;
 }
 
+.description .section > p {
+  margin-bottom: 0.15rem;
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .section {
   margin-bottom: 1.5rem;
 }
@@ -278,6 +285,15 @@ a {
 
 .item::before {
   content: '\2014  ';
+}
+
+.description .item {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.description .item::before {
+  color: var(--subtle);
 }
 
 .feature-link-icon {
