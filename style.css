@@ -273,6 +273,7 @@ a {
 .item {
   display: block;
   margin-bottom: 0.12rem;
+  color: var(--muted);
 }
 
 .item::before {
